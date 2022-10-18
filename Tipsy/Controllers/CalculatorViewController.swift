@@ -9,6 +9,8 @@
 import UIKit
 
 class CalculatorViewController: UIViewController {
+    
+    var tip = 0.1
 
 
     @IBOutlet weak var billTextField: UITextField!
@@ -29,6 +31,12 @@ class CalculatorViewController: UIViewController {
         tenPctButton.isSelected = false
         twentyPctButton.isSelected = false
         sender.isSelected = true
+        
+        let buttonTitle = sender.currentTitle!
+        let buttonTitleMinusPercent = String(buttonTitle.dropLast())
+        let buttonNumber = Double(buttonTitleMinusPercent)!
+        tip = buttonNumber / 100
+        print(tip)
     }
     
     
