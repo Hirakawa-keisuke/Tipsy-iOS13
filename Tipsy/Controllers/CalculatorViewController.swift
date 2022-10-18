@@ -36,7 +36,7 @@ class CalculatorViewController: UIViewController {
         let buttonTitleMinusPercent = String(buttonTitle.dropLast())
         let buttonNumber = Double(buttonTitleMinusPercent)!
         tip = buttonNumber / 100
-        print(tip)
+        
     }
     
     
@@ -44,6 +44,7 @@ class CalculatorViewController: UIViewController {
     }
     
     @IBAction func cakculatePressed(_ sender: UIButton) {
+        print(tip)
     }
     
 
