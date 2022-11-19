@@ -23,7 +23,9 @@ class CalculatorViewController: UIViewController {
     
     @IBOutlet weak var twentyPctButton: UIButton!
     
-    @IBOutlet weak var splitNumber: UILabel!
+    @IBOutlet weak var splitNumberLabel: UILabel!
+    
+    var numberOfPeople = 2
     
     
     @IBAction func tipChanged(_ sender: UIButton) {
@@ -41,10 +43,13 @@ class CalculatorViewController: UIViewController {
     
     
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
+        splitNumberLabel.text = String(format: "%0.f", sender.value)
+        
+        numberOfPeople = Int(sender.value)
     }
     
     @IBAction func cakculatePressed(_ sender: UIButton) {
-        print(tip)
+        print(numberOfPeople)
     }
     
 
